@@ -39,6 +39,7 @@ out/
 
 ### VS Code ###
 .vscode/
+*.DS_Store
 ```
 
-*.DS_Store
+
