@@ -1,0 +1,9 @@
+name: "hosung"
+age: 22
+isadult: true
+arr:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
