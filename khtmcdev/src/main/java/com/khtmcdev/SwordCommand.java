@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -16,6 +17,9 @@ public class SwordCommand implements CommandExecutor {
             Player player = (Player) sender;
             ItemStack item = new ItemStack(Material.DIAMOND_SWORD);
             ItemMeta meta = item.getItemMeta();
+            meta.addEnchant(Enchantment.DAMAGE_ALL, 255, true);
+            meta.addEnchant(Enchantment.KNOCKBACK, 255, true);
+            meta.addEnchant(Enchantment.MENDING, 1, true);
             meta.setDisplayName("CSE-BLADE");
             item.setItemMeta(meta);
             player.getInventory().addItem(item);
