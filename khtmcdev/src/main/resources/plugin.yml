@@ -1,0 +1,4 @@
+name: khtmcdev
+version: '${version}'
+main: com.khtmcdev.Khtmcdev
+api-version: '1.20'
