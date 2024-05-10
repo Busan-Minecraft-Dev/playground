@@ -7,7 +7,7 @@ public final class Khtmcdev extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-
+        getCommand("creeper").setExecutor(new CreeperCommand());
     }
 
     @Override
