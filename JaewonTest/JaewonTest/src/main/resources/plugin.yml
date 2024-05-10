@@ -2,3 +2,5 @@ name: JaewonTest
 version: '${version}'
 main: com.jaewontest.JaewonTest
 api-version: '1.20'
+commands:
+  Creeper:
