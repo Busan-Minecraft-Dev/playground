@@ -8,6 +8,8 @@ public final class JaewonTest extends JavaPlugin {
     public void onEnable() {
         getCommand("Creeper").setExecutor(new Creeper());
         getCommand("Sword").setExecutor(new Sword());
+        getServer().getPluginManager().registerEvents(new SnowBallListener(), this);
+        getServer().getPluginManager().registerEvents(new RideEntity(), this);
         // Plugin startup logic
 
     }
