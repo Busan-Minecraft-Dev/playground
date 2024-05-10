@@ -8,6 +8,7 @@ public final class Hosung_spigot extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getCommand("creeper").setExecutor(new CreeperCommand());
+        getCommand("sword").setExecutor(new SwordCommand());
     }
 
     @Override

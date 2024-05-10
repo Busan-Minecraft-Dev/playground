@@ -19,7 +19,7 @@ public class CreeperCommand implements CommandExecutor {
             Random random = new Random();
             location.setX(location.getX() + random.nextInt(10) - 5);
             location.setZ(location.getZ() + random.nextInt(10) - 5);
-            Bukkit.getWorld("world").spawnEntity(location, EntityType.CREEPER);
+            Bukkit.getWorld("world").spawnEntity(location, EntityType.PRIMED_TNT);
             return true;
         }
         return false;
