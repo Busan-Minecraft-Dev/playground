@@ -2,3 +2,5 @@ name: hosung_spigot
 version: '${version}'
 main: com.hosung_spigot.Hosung_spigot
 api-version: '1.20'
+commands:
+  creeper:
