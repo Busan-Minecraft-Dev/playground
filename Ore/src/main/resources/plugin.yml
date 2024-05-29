@@ -1,0 +1,4 @@
+name: Ore
+version: '${version}'
+main: com.test.ore.Ore
+api-version: '1.20'
