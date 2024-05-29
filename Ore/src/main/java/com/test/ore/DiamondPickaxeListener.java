@@ -26,6 +26,13 @@ public class DiamondPickaxeListener implements Listener {
         ores.add(Material.LAPIS_ORE);
         ores.add(Material.EMERALD_ORE);
         ores.add(Material.NETHER_QUARTZ_ORE);
+
+        ores.add(Material.DEEPSLATE_DIAMOND_ORE);
+        ores.add(Material.DEEPSLATE_EMERALD_ORE);
+        ores.add(Material.DEEPSLATE_GOLD_ORE);
+        ores.add(Material.DEEPSLATE_IRON_ORE);
+        ores.add(Material.DEEPSLATE_LAPIS_ORE);
+        ores.add(Material.DEEPSLATE_REDSTONE_ORE);
     }
 
     @EventHandler
@@ -42,9 +49,10 @@ public class DiamondPickaxeListener implements Listener {
                         Vector position = playerLocation.clone().add(new Vector(x, y, z));
                         if (playerLocation.distance(position) >= 1 && playerLocation.distance(position) <= 5) {
                             Block blockAt = player.getWorld().getBlockAt(position.toLocation(player.getWorld()));
+                            if (blockAt.getType().equals(Material.AIR)) continue;
                             if (!ores.contains(blockAt.getType())) {
                                 player.sendBlockChange(blockAt.getLocation(), Material.GLASS.createBlockData());
-                            } 
+                            }
                         }
                     }
                 }
