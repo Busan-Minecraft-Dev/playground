@@ -40,11 +40,11 @@ public class DiamondPickaxeListener implements Listener {
                 for (int y = -5; y <= 5; y++) {
                     for (int z = -5; z <= 5; z++) {
                         Vector position = playerLocation.clone().add(new Vector(x, y, z));
-                        if (playerLocation.distance(position) <= 5) {
+                        if (playerLocation.distance(position) >= 1 && playerLocation.distance(position) <= 5) {
                             Block blockAt = player.getWorld().getBlockAt(position.toLocation(player.getWorld()));
                             if (!ores.contains(blockAt.getType())) {
                                 player.sendBlockChange(blockAt.getLocation(), Material.GLASS.createBlockData());
-                            }
+                            } 
                         }
                     }
                 }
